@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    
+    <body>
+        <header class="blue darken-4 center-align white-text">
+            <h1>Weather Dashboard</h1>
+        </header>
+        
+        <ul class = "sidenav sidenav-fixed">
+            <h4>Search for a city</h4>
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <a class="waves-effect waves-green btn-small searchButton">Search</a>
+                    <i class="material-icons">X</i>
+                </div>
+            </form>
+            
+        </ul>
+
+        <div class="container">
+            <div id = "city"></div>
+            <div id = "temp"></div>
+            <div id = "humidity"></div>
+            <div id = "wind"></div>
+            <br>
+            <div>
+                <h3>5 Day Forecast:</h3>
+            </div>
+            <div>
+                <div class="row">
+                    <div class = "col s2 m2">
+                        <div class="day4 card blue"></div>
+                    </div>
+                    <div class = "col s2 m2">
+                        <div class="day12 card blue"></div>
+                    </div>
+                    <div class = "col s2 m2">
+                        <div class="day20 card blue"></div>
+                    </div>
+                    <div class = "col s2 m2">
+                        <div class="day28 card blue"></div>
+                    </div>
+                    <div class = "col s2 m2">
+                        <div class="day36 card blue"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
