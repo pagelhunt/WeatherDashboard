@@ -1,18 +1,24 @@
+var cities = [];
 $(document).ready(function()
 {
-    //loadSavedSearch();
+    
     function loadSavedSearch()
     {
         savedCities = JSON.parse(localStorage.getItem("savedCities"))
-        for(var i = 0; i < savedCities.length; i++)
+        if(savedCities)
         {
-            saveSearch(savedCities[i]);
+        console.log(typeof savedCities);
+        for(var i = 0; i < savedCities.length; i++)
+        saveSearch(savedCities[i])
+        
         }
     }
+    loadSavedSearch();
 
     function saveSearch(city)
     {
-        localStorage.setItem("savedCities", city)
+        cities.push(city)
+        localStorage.setItem("savedCities", JSON.stringify(cities))
         var cityList = $("<li>")
         var citybutton = $("<a>")
         citybutton.text(city)
